@@ -45,7 +45,7 @@ function onReady() {
         }
     });
 
-  });
+   });
 
 
 
@@ -61,7 +61,7 @@ function onReady() {
     for(let i = 0; i < holder.length; i++){
       if(checkAttribute === "true"){
         holder[i].parentNode.removeChild(holder[i]);
-        //console.log("working if case");
+        
       }
       else{console.log("for loop else")};
 
