@@ -3,6 +3,8 @@ function onReady() {
    const newToDoText = document.getElementById('newToDoText');
    const toDoList = document.getElementById('toDoList');
 
+
+
    addToDoForm.addEventListener('submit', (event) => {
     event.preventDefault();
 
@@ -19,6 +21,12 @@ function onReady() {
       // set the input's type to checkbox
       checkbox.type = "checkbox";
 
+      let deleteInput = document.createElement('input');
+      deleteInput.type = "button";
+      deleteInput.value = "Delete To-Do!";
+      deleteInput.id = "delete1";
+
+
       // set the title
       newLi.textContent = title;
 
@@ -27,18 +35,21 @@ function onReady() {
 
       // attach the checkbox to the li
       newLi.appendChild(checkbox);
+      newLi.appendChild(deleteInput);
 
        //empty the input
       newToDoText.value = '';
+
+
+      deleteInput.addEventListener('click', (event) => {
+      event.preventDefault;
+      deleteInput.parentElement.parentElement.removeChild(newLi);
+
+    });
+
   });
 
 }
-
-
-
-
-
-
 
 
 
